@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Failure</title>
+
+    <!-- Principal CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+
+    body {
+        background-color: #E4DCCF; 
+    }
+    .button {
+        color:white;
+        background-color: #576F72;
+        width: 120px;
+    }
+
+    .button:hover {
+        background-color: #7D9D9C;
+    }
+
+</style>
+</head>
+<body>
+    <div class="bg-light p-5 rounded-lg m-3">
+        <h1 class="display-4">Uh oh!</h1>
+        <p class="lead">There was a problem signing you up. Please try again!.</p>
+
+        <form action="/failure" method="post">
+            <button class= "btn btn-lg button" type="submit" name="button"> Try again</button>
+        </form>
+      </div>
+</body>
+</html>
