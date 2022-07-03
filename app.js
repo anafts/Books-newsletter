@@ -4,6 +4,9 @@ const request = require("request");
 const bodyParser = require("body-parser");
 const https = require("https");
 const client = require("@mailchimp/mailchimp_marketing");
+const dotenv = require("dotenv");
+
+dotenv.config()
 
 // Initializing the constant "app": 
 const app = express();
@@ -20,7 +23,7 @@ res.sendFile(__dirname + "/signup.html");
 
 //Setting up MailChimp
 client.setConfig({
-     apiKey: "c23226008388a8b04db79275f4e8cf85-us10",
+     apiKey: process.env.API_KEY,
      server: "us10"
     });
 
@@ -29,7 +32,7 @@ client.setConfig({
         const firstName = req.body.firstName;
         const lastName = req.body.lastName;
         const email = req.body.email;
-        const listId = "7f903df555";
+        const listId = process.env.LIST_ID;
         console.log(firstName, lastName, email);
 
         //Creating an object with the users data
@@ -79,8 +82,3 @@ app.post("/sucess", function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
      console.log("Server is running on port 3000");
 });
-
-
-
-// API KEY : c23226008388a8b04db79275f4e8cf85-us10 
-// LIST ID: 7f903df555
