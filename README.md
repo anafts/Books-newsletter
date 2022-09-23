@@ -10,7 +10,7 @@
 
 ## 💻 Descrição do projeto:
 
-O projeto é um newsletter para quem é leitor e deseja receber e-mails sobre livros. 
+O projeto é um newsletter para quem é leitor e deseja receber e-mails sobre os livros mais vendidos no momento.
  
 
  <br>
